@@ -1,0 +1,180 @@
+body{
+    margin: 0;
+    color: rgb(89, 89, 89);
+    background-color: rgb(243, 243, 243);
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    font-size: 34px;
+    padding-top: 1em;
+}
+
+figure{
+    margin: 0;
+}
+
+img{
+    display: block;
+    width: 100%;
+    border: 0;
+    height: auto;
+}
+
+nav ul{
+    display: block;
+    list-style: none;
+    margin: 2em 0 5em -2.5em;
+}
+nav ul li{
+    color:#396da8;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    cursor: pointer;
+}
+nav ul li:hover{
+    background-color: #396da8;
+    color: #a3f1ff;
+}
+
+nav .item1{
+    background-color: #dee6fc;
+}
+
+nav .item2{
+    background-color: #deeefc;
+}
+
+nav .item3{
+    background-color: #cff6fa;
+}
+
+nav .item4{
+    background-color: #bcf7f7;
+}
+
+nav .item5{
+    background-color: #a3f1ff;
+}
+
+nav .item6{
+    background-color: #ace9fc;
+}
+
+.title{
+    text-align: center;
+}
+
+.cards{
+    margin: 1em;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cards a{
+    text-decoration: none;
+}
+
+.caption{
+    padding: 1em;
+    color: #396da8;
+}
+
+.caption_detail{
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+footer {
+    font-size: .9em;
+    
+    padding-top: 2em;
+    text-align: center;
+    margin: 25px 0 50px 0;
+}
+
+footer .copyright{
+    text-decoration: none;
+}
+
+footer img{
+    display: inline;
+    width: 10%;
+}
+
+footer .copyright{
+    text-decoration:none;
+}
+
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 30em) {
+        nav ul{
+            display: flex;
+            width: 100%;
+            list-style: none;
+            margin-bottom: 2em;
+        }
+        
+        .cards {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 5em;
+            padding: 0 5%;;
+		}
+
+		.fig {
+			display: grid;
+		}
+
+		.fig img,
+		.caption {
+			grid-column: 1;
+			grid-row: 1;
+		}
+
+		.caption {
+			display: flex;
+			align-items: flex-start;
+			opacity: 0;
+		}
+
+        .caption{
+            padding: 1em;
+            color: rgb(243, 243, 243);
+        }
+
+		a:focus .caption,
+		a:hover .caption {
+			background: rgba(107, 107, 107, 0.8);
+			opacity: 1;
+		}
+
+        footer img{
+            width: 5%;
+            display: inline;
+        }
+
+	}
+
+	@media screen and (min-width: 60em) {
+
+		.nav{
+            display: flex;
+            flex-direction: column;
+        }
+        .cards {
+			grid-template-columns: repeat(3, 1fr);
+            padding: 0 10%;
+		}
+
+	}
+
+}
